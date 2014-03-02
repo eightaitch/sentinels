@@ -1,0 +1,25 @@
+{
+  "name": "sentinels",
+  "version": "0.0.0",
+  "description": "sentinels =========",
+  "main": "build/sentinels.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browserify": "~3.31.2",
+    "reactify": "~0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eightaitch/sentinels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eightaitch/sentinels/issues"
+  },
+  "homepage": "https://github.com/eightaitch/sentinels"
+}
