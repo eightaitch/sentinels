@@ -15,6 +15,10 @@ module.exports = function(grunt) {
             scripts: {
                 files: 'src/*.jsx',
                 tasks: ['browserify']
+            },
+            styles: {
+                files: 'src/*.less',
+                tasks: ['less']
             }
         },
         browserify: {
@@ -24,6 +28,13 @@ module.exports = function(grunt) {
             app: {
                 src: 'index.jsx',
                 dest: 'build/sentinels.js'
+            }
+        },
+        less: {
+            development: {
+                files: {
+                    'build/sentinels.css': 'src/sentinels.less'
+                }
             }
         }
     });
