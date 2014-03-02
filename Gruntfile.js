@@ -14,11 +14,17 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: 'src/*.jsx',
-                tasks: ['browserify']
+                tasks: ['browserify'],
+                options: {
+                    livereload: true
+                }
             },
             styles: {
                 files: 'src/*.less',
-                tasks: ['less']
+                tasks: ['less'],
+                options: {
+                    livereload: true
+                }
             }
         },
         browserify: {

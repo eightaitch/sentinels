@@ -5,8 +5,8 @@ var React = require('react');
 module.exports = React.createClass({
     render: function() {
         return (
-            <div>
-                sentinels
+            <div className="card">
+                
             </div>
         )
     }
