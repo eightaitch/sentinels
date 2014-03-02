@@ -10,7 +10,17 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('log', 'Log some stuff.', function() {
-        grunt.log.write('Logging some stuff . . .').ok();
+    grunt.initConfig({
+        browserify: {
+            options: {
+                transform: [require('grunt-react').browserify]
+            },
+            app: {
+                src: 'index.jsx',
+                dest: 'build/sentinels.js'
+            }
+        }
     });
+
+    grunt.registerTask('default', ['browserify']);
 }
