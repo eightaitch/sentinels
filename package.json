@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "description": "sentinels =========",
   "main": "build/sentinels.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "~3.31.2",
-    "reactify": "~0.9.1"
+    "reactify": "~0.9.1",
+    "grunt": "^0.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
