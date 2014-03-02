@@ -11,6 +11,12 @@ module.exports = function(grunt) {
     });
 
     grunt.initConfig({
+        watch: {
+            scripts: {
+                files: 'src/*.jsx',
+                tasks: ['browserify']
+            }
+        },
         browserify: {
             options: {
                 transform: [require('grunt-react').browserify]
