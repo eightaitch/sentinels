@@ -12,19 +12,16 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch: {
+            options: {
+                livereload: true
+            },
             scripts: {
                 files: 'src/*.jsx',
                 tasks: ['browserify'],
-                options: {
-                    livereload: true
-                }
             },
             styles: {
                 files: 'src/*.less',
                 tasks: ['less'],
-                options: {
-                    livereload: true
-                }
             }
         },
         browserify: {

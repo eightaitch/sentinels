@@ -1,11 +1,13 @@
+@percent: 100;
+@card-width: 238px * (@percent/100);
+@card-height: 332px * (@percent/100);
 body {
     background-color: #ddd;
 }
-
 .card {
     display: inline-block;
-    width: 238px;
-    height: 332px;
+    width: @card-width;
+    height: @card-height;
     background-color: #000;
-    border-radius: 10px;
+    border-radius: @card-width/20;
 }
