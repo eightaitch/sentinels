@@ -24,14 +24,14 @@ module.exports = InsulaPrimalis;
 /** @jsx React.DOM */
 
 var React = require('react');
-var Board = require('./src/Board.jsx');
+var Board = require('./src/react/Board.jsx');
 
 React.renderComponent(
     Board(null ),
     document.body
 );
 
-},{"./src/Board.jsx":134,"react":133}],3:[function(require,module,exports){
+},{"./src/react/Board.jsx":135,"react":133}],3:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -16826,6 +16826,11 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":27}],134:[function(require,module,exports){
+module.exports = function(deck) {
+
+}
+
+},{}],135:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16853,7 +16858,7 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"./Zone.jsx":139,"react":133}],135:[function(require,module,exports){
+},{"./Zone.jsx":140,"react":133}],136:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16868,7 +16873,7 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"react":133}],136:[function(require,module,exports){
+},{"react":133}],137:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16883,7 +16888,7 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"react":133}],137:[function(require,module,exports){
+},{"react":133}],138:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16898,7 +16903,7 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"react":133}],138:[function(require,module,exports){
+},{"react":133}],139:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16913,7 +16918,7 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"react":133}],139:[function(require,module,exports){
+},{"react":133}],140:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16921,9 +16926,11 @@ var Trash = require('./Trash.jsx');
 var Deck = require('./Deck.jsx');
 var Hand = require('./Hand.jsx');
 var PlayArea = require('./PlayArea.jsx');
-var InsulaPrimalis = require('./../data/environments/InsulaPrimalis.js');
+var InsulaPrimalis = require('./../../data/environments/InsulaPrimalis.js');
+var BuildDeck = require('./../js/BuildDeck.js');
 
-console.log(InsulaPrimalis);
+InsulaPrimalisDeck = BuildDeck(InsulaPrimalis);
+console.log(InsulaPrimalisDeck);
 
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
@@ -16939,4 +16946,4 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"./../data/environments/InsulaPrimalis.js":1,"./Deck.jsx":135,"./Hand.jsx":136,"./PlayArea.jsx":137,"./Trash.jsx":138,"react":133}]},{},[2])
+},{"./../../data/environments/InsulaPrimalis.js":1,"./../js/BuildDeck.js":134,"./Deck.jsx":136,"./Hand.jsx":137,"./PlayArea.jsx":138,"./Trash.jsx":139,"react":133}]},{},[2])
