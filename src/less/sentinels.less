@@ -11,10 +11,39 @@ body {
     display: block;
     overflow: auto;
 }
+.trash,
+.deck,
+.hand,
+.play-area {
+    display: inline-block;
+    height: 100%;
+    min-width: @card-width*1.1;
+}
+.trash {
+    background-color: rgba(255,255,255,.5);
+}
+.deck {
+    background-color: rgba(255,255,255,.6);
+}
+.hand {
+    background-color: rgba(255,255,255,.7);
+}
+.play-area {
+    background-color: rgba(255,255,255,.8);
+}
 .card {
     display: inline-block;
     width: @card-width;
     height: @card-height;
     background-color: #000;
     border-radius: @card-width/20;
+}
+.environment {
+    background-color: green;
+}
+.villain {
+    background-color: red;
+}
+.hero {
+    background-color: blue;
 }

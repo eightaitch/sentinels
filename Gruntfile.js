@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         less: {
             development: {
                 files: {
-                    'build/sentinels.css': 'src/sentinels.less'
+                    'build/sentinels.css': 'src/less/sentinels.less'
                 }
             }
         }

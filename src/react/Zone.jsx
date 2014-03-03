@@ -8,16 +8,16 @@ var PlayArea = require('./PlayArea.jsx');
 var InsulaPrimalis = require('./../../data/environments/InsulaPrimalis.js');
 var BuildDeck = require('./../js/BuildDeck.js');
 
-InsulaPrimalisDeck = BuildDeck(InsulaPrimalis);
-console.log(InsulaPrimalisDeck);
+var deck = BuildDeck(InsulaPrimalis);
 
 module.exports = React.createClass({
     render: function() {
         console.log(this.props.type);
+        var className = 'zone '+this.props.type;
         return (
-            <div className="zone">
+            <div className={className}>
                 <Trash />
-                <Deck />
+                <Deck cards={deck} />
                 <Hand />
                 <PlayArea />
             </div>
