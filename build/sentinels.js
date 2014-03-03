@@ -16807,14 +16807,60 @@ module.exports = require('./lib/React');
 /** @jsx React.DOM */
 
 var React = require('react');
+var Environment = require('./Environment.jsx');
+var Villain = require('./Villain.jsx');
+var Heroes = require('./Heroes.jsx');
 
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
         return (
             React.DOM.div( {className:"board"}, 
+            "hi",
                 Environment(null ),
                 Villain(null ),
                 Heroes(null )
+            )
+        )
+    }
+});
+
+},{"./Environment.jsx":134,"./Heroes.jsx":135,"./Villain.jsx":136,"react":132}],134:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"Environment"}
+            )
+        )
+    }
+});
+
+},{"react":132}],135:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"Heroes"}
+            )
+        )
+    }
+});
+
+},{"react":132}],136:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"Villain"}
             )
         )
     }
