@@ -16807,7 +16807,7 @@ module.exports = require('./lib/React');
 /** @jsx React.DOM */
 
 var React = require('react');
-var PlayArea = require('./PlayArea.jsx');
+var Zone = require('./Zone.jsx');
 
 module.exports = React.createClass({displayName: 'exports',
     getInitialState: function() {
@@ -16816,26 +16816,89 @@ module.exports = React.createClass({displayName: 'exports',
         };
     },
     render: function() {
-        console.log('Board:render');
         var heroes = '';
         for(i=0; i<this.state.heroes; i++) {
-            heroes += PlayArea(null );
+            heroes += Zone(null );
         }
         return (
             React.DOM.div( {className:"board"}, 
                 "Board",
-                PlayArea(null ),
-                PlayArea(null ),
+                Zone(null ),
+                Zone(null ),
                 heroes
             )
         )
     }
 });
 
-},{"./PlayArea.jsx":134,"react":132}],134:[function(require,module,exports){
+},{"./Zone.jsx":138,"react":132}],134:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"deck"}, 
+                "Deck"
+            )
+        )
+    }
+});
+
+},{"react":132}],135:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"hand"}, 
+                "Hand"
+            )
+        )
+    }
+});
+
+},{"react":132}],136:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"play-area"}, 
+                "PlayArea"
+            )
+        )
+    }
+});
+
+},{"react":132}],137:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+module.exports = React.createClass({displayName: 'exports',
+    render: function() {
+        return (
+            React.DOM.div( {className:"trash"}, 
+                "Trash"
+            )
+        )
+    }
+});
+
+},{"react":132}],138:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+var Trash = require('./Trash.jsx');
+var Deck = require('./Deck.jsx');
+var Hand = require('./Hand.jsx');
+var PlayArea = require('./PlayArea.jsx');
 
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
@@ -16851,4 +16914,4 @@ module.exports = React.createClass({displayName: 'exports',
     }
 });
 
-},{"react":132}]},{},[1])
+},{"./Deck.jsx":134,"./Hand.jsx":135,"./PlayArea.jsx":136,"./Trash.jsx":137,"react":132}]},{},[1])

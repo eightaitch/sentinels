@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var PlayArea = require('./PlayArea.jsx');
+var Zone = require('./Zone.jsx');
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -10,16 +10,15 @@ module.exports = React.createClass({
         };
     },
     render: function() {
-        console.log('Board:render');
         var heroes = '';
         for(i=0; i<this.state.heroes; i++) {
-            heroes += <PlayArea />;
+            heroes += <Zone />;
         }
         return (
             <div className="board">
                 Board
-                <PlayArea />
-                <PlayArea />
+                <Zone />
+                <Zone />
                 {heroes}
             </div>
         )
