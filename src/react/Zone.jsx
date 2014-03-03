@@ -12,12 +12,13 @@ var deck = BuildDeck(InsulaPrimalis);
 
 module.exports = React.createClass({
     render: function() {
-        console.log(this.props.type);
         var className = 'zone '+this.props.type;
         return (
             <div className={className}>
                 <Trash />
-                <Deck cards={deck} />
+                <Deck 
+                    cards={this.props.type === 'environment' ? deck : {}}
+                />
                 <Hand />
                 <PlayArea />
             </div>

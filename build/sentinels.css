@@ -1,6 +1,7 @@
 body {
   background-color: #ddd;
   margin: 0;
+  font-family: "Comic Book";
 }
 .zone {
   width: 100%;
@@ -16,6 +17,7 @@ body {
   display: inline-block;
   height: 100%;
   min-width: 261.8px;
+  vertical-align: top;
 }
 .trash {
   background-color: rgba(255, 255, 255, 0.5);
@@ -33,15 +35,31 @@ body {
   display: inline-block;
   width: 238px;
   height: 332px;
-  background-color: #000;
   border-radius: 11.9px;
+  border: 11.9px solid #000000;
+  margin-top: 16.6px;
+  margin-left: 11.9px;
+  text-align: center;
+}
+.card-back {
+  width: 238px;
+  line-height: 332px;
 }
 .environment {
+  background-color: green;
+}
+.environment .card {
   background-color: green;
 }
 .villain {
   background-color: red;
 }
+.villain .card {
+  background-color: red;
+}
 .hero {
+  background-color: blue;
+}
+.hero .card {
   background-color: blue;
 }

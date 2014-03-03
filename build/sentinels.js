@@ -23670,9 +23670,15 @@ var React = require('react');
 
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
+        console.log(this.props.cards);
+        var deck= this.props.cards.length > 0
+            ? React.DOM.span( {className:"card-back"}, "Insula Primalis")
+            : React.DOM.span( {className:"empty-deck"}, "Insula Primalis");
         return (
             React.DOM.div( {className:"deck"}, 
-                "Deck"
+                React.DOM.div( {className:"card"}, 
+                    deck
+                )
             )
         )
     }
@@ -23738,12 +23744,13 @@ var deck = BuildDeck(InsulaPrimalis);
 
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
-        console.log(this.props.type);
         var className = 'zone '+this.props.type;
         return (
             React.DOM.div( {className:className}, 
                 Trash(null ),
-                Deck( {cards:deck} ),
+                Deck( 
+                    {cards:this.props.type === 'environment' ? deck : {}}
+                ),
                 Hand(null ),
                 PlayArea(null )
             )
