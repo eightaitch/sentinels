@@ -3,7 +3,7 @@ var InsulaPrimalis = [
         front: {
             name: 'Enraged T-REX',
             hp: 15,
-            type: ['Dinosaur']
+            type: ['Dinosaur'],
             text: 'At the end of the Environment turn, this card deals the target other than itself with the second highest HP 5 melee damage.'
         },
         count: 2
@@ -15,5 +15,6 @@ var InsulaPrimalis = [
         },
         count: 2
     }
-]
+];
 
+module.exports = InsulaPrimalis;

@@ -15,12 +15,20 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
+            react: {
+                files: 'src/react/*.jsx',
+                tasks: ['browserify'],
+            },
             scripts: {
-                files: 'src/*.jsx',
+                files: 'src/js/*.js',
+                tasks: ['browserify'],
+            },
+            data: {
+                files: 'data/**/*.js',
                 tasks: ['browserify'],
             },
             styles: {
-                files: 'src/*.less',
+                files: 'src/less/*.less',
                 tasks: ['less'],
             }
         },
