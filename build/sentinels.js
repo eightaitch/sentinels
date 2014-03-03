@@ -16814,11 +16814,7 @@ var Heroes = require('./Heroes.jsx');
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
         return (
-            React.DOM.div( {className:"board"}, 
-            "hi",
-                Environment(null ),
-                Villain(null ),
-                Heroes(null )
+            React.DOM.div( {className:"board"}
             )
         )
     }
@@ -16832,7 +16828,11 @@ var React = require('react');
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
         return (
-            React.DOM.div( {className:"Environment"}
+            React.DOM.div( {className:"section"}, 
+                Trash(null ),
+                Deck(null ),
+                Hand(null ),
+                PlayArea(null )
             )
         )
     }
