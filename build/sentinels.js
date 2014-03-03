@@ -16816,10 +16816,11 @@ module.exports = React.createClass({displayName: 'exports',
         };
     },
     render: function() {
-        var heroes = '';
-        for(i=0; i<this.state.heroes; i++) {
-            heroes += Zone(null );
-        }
+        var heroes = function() {
+            for(i=0; i<this.state.heroes; i++) {
+                return Zone(null );
+            }
+        }.call(this);
         return (
             React.DOM.div( {className:"board"}, 
                 "Board",

@@ -10,10 +10,11 @@ module.exports = React.createClass({
         };
     },
     render: function() {
-        var heroes = '';
-        for(i=0; i<this.state.heroes; i++) {
-            heroes += <Zone />;
-        }
+        var heroes = function() {
+            for(i=0; i<this.state.heroes; i++) {
+                return <Zone />;
+            }
+        }.call(this);
         return (
             <div className="board">
                 Board
