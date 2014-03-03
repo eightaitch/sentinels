@@ -16807,20 +16807,32 @@ module.exports = require('./lib/React');
 /** @jsx React.DOM */
 
 var React = require('react');
-var Environment = require('./Environment.jsx');
-var Villain = require('./Villain.jsx');
-var Heroes = require('./Heroes.jsx');
+var PlayArea = require('./PlayArea.jsx');
 
 module.exports = React.createClass({displayName: 'exports',
+    getInitialState: function() {
+        return {
+            heroes: 1
+        };
+    },
     render: function() {
+        console.log('Board:render');
+        var heroes = '';
+        for(i=0; i<this.state.heroes; i++) {
+            heroes += PlayArea(null );
+        }
         return (
-            React.DOM.div( {className:"board"}
+            React.DOM.div( {className:"board"}, 
+                "Board",
+                PlayArea(null ),
+                PlayArea(null ),
+                heroes
             )
         )
     }
 });
 
-},{"./Environment.jsx":134,"./Heroes.jsx":135,"./Villain.jsx":136,"react":132}],134:[function(require,module,exports){
+},{"./PlayArea.jsx":134,"react":132}],134:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -16828,39 +16840,12 @@ var React = require('react');
 module.exports = React.createClass({displayName: 'exports',
     render: function() {
         return (
-            React.DOM.div( {className:"section"}, 
+            React.DOM.div( {className:"zone"}, 
+                "Zone",
                 Trash(null ),
                 Deck(null ),
                 Hand(null ),
                 PlayArea(null )
-            )
-        )
-    }
-});
-
-},{"react":132}],135:[function(require,module,exports){
-/** @jsx React.DOM */
-
-var React = require('react');
-
-module.exports = React.createClass({displayName: 'exports',
-    render: function() {
-        return (
-            React.DOM.div( {className:"Heroes"}
-            )
-        )
-    }
-});
-
-},{"react":132}],136:[function(require,module,exports){
-/** @jsx React.DOM */
-
-var React = require('react');
-
-module.exports = React.createClass({displayName: 'exports',
-    render: function() {
-        return (
-            React.DOM.div( {className:"Villain"}
             )
         )
     }
